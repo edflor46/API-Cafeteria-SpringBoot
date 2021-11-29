@@ -25,4 +25,5 @@ public class ClienteServiceImpl implements ICafeService{
     public Cafe findById(Long id) {
         return cafeDao.findById(id).orElse(null);
     }
+
 }
