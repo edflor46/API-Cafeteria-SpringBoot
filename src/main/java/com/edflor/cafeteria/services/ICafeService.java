@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface ICafeService {
     public List<Cafe>findAll();
+
+    public Cafe findById(Long id);
 }

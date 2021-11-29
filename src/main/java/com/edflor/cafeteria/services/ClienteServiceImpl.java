@@ -19,4 +19,10 @@ public class ClienteServiceImpl implements ICafeService{
     public List<Cafe> findAll() {
         return (List<Cafe>) cafeDao.findAll();
     }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Cafe findById(Long id) {
+        return cafeDao.findById(id).orElse(null);
+    }
 }
